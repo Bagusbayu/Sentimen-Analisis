@@ -1,8 +1,4 @@
 @extends('base') {{-- mengambil file base.blade.php --}}
 @section('content') {{-- Mengisi di bagian content --}}
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Left</button>
-  <button type="button" class="btn btn-default">Middle</button>
-  <button type="button" class="btn btn-default">Right</button>
-</div>
+        	<img src="assets/image/tell-medium-cover.jpg" alt="Image" class="img-fluid" width="1360" height="333">
 @endsection
