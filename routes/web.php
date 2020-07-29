@@ -21,7 +21,7 @@ Route::resource('dashboard','Cdashboard');
 
 Route::resource('informasi','Cinformasi');
 
-Route::resource('diagram','Cdiagram');
+Route::get('diagram','Cdiagram@index');
 
 Route::get('/login', 'Clogin@login');
 Route::post('/loginPost', 'Clogin@loginPost');
