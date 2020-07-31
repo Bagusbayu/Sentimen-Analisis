@@ -13,7 +13,7 @@ class Cdiagram extends Controller
      */
     public function index()
     {
-        return view ('diagram' , compact('users'));
+        return view ('diagram');
     }
 
     /**
