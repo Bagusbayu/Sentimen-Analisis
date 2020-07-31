@@ -15,7 +15,12 @@ class Clogin extends Controller
     public function index()
     {
         $data = Mlogin::all();
+        if(!Session::get('login')){
+            return redirect('login')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('admin',compact('data'));
+    }
     }
 
     /**
@@ -25,7 +30,12 @@ class Clogin extends Controller
      */
     public function create()
     {
+        if(!Session::get('login')){
+            return redirect('login')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('inputadmin');
+    }
     }
 
     /**

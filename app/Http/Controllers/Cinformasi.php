@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class Cinformasi extends Controller
 {
@@ -13,7 +14,12 @@ class Cinformasi extends Controller
      */
     public function index()
     {
+        if(!Session::get('login')){
+            return redirect('login')->with('alert','Kamu harus login dulu');
+        }
+        else{
         return view ('informasi');
+    }
     }
 
     /**

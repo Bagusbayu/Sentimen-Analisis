@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class Cdashboard extends Controller
 {
@@ -13,7 +14,12 @@ class Cdashboard extends Controller
      */
     public function index()
     {
-        return view ('dashboard');
+        if(!Session::get('login')){
+            return redirect('login')->with('alert','Kamu harus login dulu');
+        }
+        else{
+            return view ('dashboard');
+        }
     }
 
     /**
